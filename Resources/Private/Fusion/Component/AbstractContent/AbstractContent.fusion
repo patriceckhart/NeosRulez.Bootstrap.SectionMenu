@@ -1,0 +1,8 @@
+prototype(NeosRulez.Bootstrap.SectionMenu:Component.AbstractContent) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="neosrulez-bootstrap-sectionmenu">
+            {props.content}
+        </div>
+    `
+}

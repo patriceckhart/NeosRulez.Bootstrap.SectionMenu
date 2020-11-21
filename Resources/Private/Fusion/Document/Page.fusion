@@ -1,0 +1,18 @@
+prototype(Neos.Neos:Page) {
+    head {
+        neosrulezBootstrapSectionMenuStyles = NeosRulez.ScssParser:ScssFile
+        neosrulezBootstrapSectionMenuStyles {
+            source = 'resource://NeosRulez.Bootstrap.SectionMenu/Private/Styles/styles.scss'
+            inline = FALSE
+            format = 'compressed'
+            outputFolder = 'resource://NeosRulez.Bootstrap.SectionMenu/Public/Styles/'
+        }
+    }
+    neosrulezBootstrapSectionMenuScripts = NeosRulez.JsMinifier:JsFile
+    neosrulezBootstrapSectionMenuScripts {
+        @position = 'end'
+        source = 'resource://NeosRulez.Bootstrap.SectionMenu/Private/JavaScript/scripts.js'
+        inline = FALSE
+        outputFolder = 'resource://NeosRulez.Bootstrap.SectionMenu/Public/JavaScript/'
+    }
+}

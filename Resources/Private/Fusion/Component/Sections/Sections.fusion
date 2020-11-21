@@ -1,0 +1,13 @@
+prototype(NeosRulez.Bootstrap.SectionMenu:Component.Sections) < prototype(Neos.Fusion:Component) {
+
+    sections = Neos.Neos:ContentCollection {
+        nodePath = ${q(node).children('sections').property('_path')}
+        collection = ${q(node).children('sections').children()}
+    }
+
+    renderer = afx`
+        <section class="neosrulez-bootstrap-sectionmenu-component-sections">
+            {props.sections}
+        </section>
+    `
+}

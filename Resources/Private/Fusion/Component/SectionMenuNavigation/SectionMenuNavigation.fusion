@@ -1,0 +1,18 @@
+prototype(NeosRulez.Bootstrap.SectionMenu:Component.SectionMenuNavigation) < prototype(Neos.Fusion:Component) {
+
+    sections = ${q(node).children().children('[instanceof NeosRulez.Bootstrap.SectionMenu:Component.Section]').sort('_index', 'ASC').get()}
+
+    renderer = afx`
+        <div class="neosrulez-bootstrap-sectionmenu-component-sectionmenunavigation-wrapper">
+            <div @if.render={props.sections} class="neosrulez-bootstrap-sectionmenu-component-sectionmenunavigation">
+                <Neos.Fusion:Loop items={props.sections} itemName="section" >
+                    <div class="sectionmenunavigation-item" data-identifier={'sectionmenuitem__' + section.identifier} >
+                        <span>
+                            {section.properties.title}
+                        </span>
+                    </div>
+                </Neos.Fusion:Loop>
+            </div>
+        </div>
+    `
+}

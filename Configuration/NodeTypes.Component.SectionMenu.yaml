@@ -1,0 +1,20 @@
+'NeosRulez.Bootstrap.SectionMenu:Component.SectionMenu':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Section Menu'
+    group: neosrulez_bootstrap_sectionmenu
+    icon: fas fa-bars
+    inspector:
+      groups:
+        neosrulez_bootstrap_sectionmenu:
+          label: 'Section Menu'
+          icon: fas fa-bars
+  childNodes:
+    'sections':
+      position: 'end'
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'NeosRulez.Bootstrap.SectionMenu:Component.Section': true

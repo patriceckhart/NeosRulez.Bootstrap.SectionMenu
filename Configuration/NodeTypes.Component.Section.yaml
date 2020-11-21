@@ -1,0 +1,29 @@
+'NeosRulez.Bootstrap.SectionMenu:Component.Section':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Section'
+    group: neosrulez_bootstrap_sectionmenu
+    icon: far fa-square
+    inspector:
+      groups:
+        neosrulez_bootstrap_section:
+          label: 'Section'
+          icon: far fa-square
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Title'
+        reloadIfChanged: true
+        showInCreationDialog: true
+        inspector:
+          group: neosrulez_bootstrap_section
+  childNodes:
+    'section':
+      position: 'end'
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap.SectionMenu:Component.Section': false
+          'NeosRulez.Bootstrap.SectionMenu:Component.SectionMenu': false

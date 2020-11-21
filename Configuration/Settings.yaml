@@ -1,0 +1,17 @@
+Neos:
+  Neos:
+#    userInterface:
+#      translation:
+#        autoInclude:
+#          NeosRulez.Bootstrap.SectionMenu:
+#            - Main
+#            - 'NodeTypes/*'
+#            - 'NodeTypes/Component/*'
+    nodeTypes:
+      groups:
+        neosrulez_bootstrap_sectionmenu:
+          position: 'end'
+          label: 'Section Menu'
+    fusion:
+      autoInclude:
+        NeosRulez.Bootstrap.SectionMenu: true

@@ -1,0 +1,4 @@
+'Neos.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      'NeosRulez.Bootstrap.SectionMenu:Component.Section': false

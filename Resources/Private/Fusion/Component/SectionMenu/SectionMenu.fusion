@@ -1,0 +1,13 @@
+prototype(NeosRulez.Bootstrap.SectionMenu:Component.SectionMenu) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="row">
+            <div class="col-md-3">
+                <NeosRulez.Bootstrap.SectionMenu:Component.SectionMenuNavigation />
+            </div>
+            <div class="col-md-7">
+                <NeosRulez.Bootstrap.SectionMenu:Component.Sections />
+            </div>
+        </div>
+    `
+}
